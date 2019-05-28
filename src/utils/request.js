@@ -61,13 +61,7 @@ function getStorages(key) {
           icon: 'none'
         })
       }
-  
-      if (err.code === CODE_AUTH_EXPIRED && autoLogin) {
-        Taro.navigateTo({
-          url: '/pages/user-login/user-login'
-        })
-      }
-  
+
       return Promise.reject({ message: defaultMsg, ...err })
     })
   }

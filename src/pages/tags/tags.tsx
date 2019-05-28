@@ -6,7 +6,7 @@ import { connect } from '@tarojs/redux'
 import * as actions from '../../actions/cate'
 import './tags.less'
 
-@connect(state => state.cate, { ...actions })
+@connect(({ actions }) => ({ actions }))
 export default class Tags extends Component {
 
   config: Config = {
@@ -20,9 +20,7 @@ export default class Tags extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatchMenu().then((res) => {
-      console.log('res', res)
-    })
+    console.log(this)
   }
 
   render () {

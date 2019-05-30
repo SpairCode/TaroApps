@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import './leftSideBar.less'
+import './leftSideBar.scss'
 
 export default class leftSideBar extends Component {
   render () {

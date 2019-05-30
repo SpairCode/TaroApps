@@ -1,5 +1,9 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
+import { Provider } from '@tarojs/redux'
+import configstore from './store'
+
+const store = configstore()
 
 import './app.less'
 import 'taro-ui/dist/style/components/flex.scss'
@@ -74,7 +78,9 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }

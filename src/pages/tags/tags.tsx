@@ -1,40 +1,38 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import { View } from '@tarojs/components'
-import LeftSideBar from '../leftSideBar/leftSideBar'
-import RightSideBar from '../rightSideBar/rightSIdeBar'
+import Taro, { Component } from '@tarojs/taro'
+import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import * as actions from '../../actions/cate'
-import './tags.less'
+// import './index.scss'
 
-@connect(({ actions }) => ({ actions }))
-export default class Tags extends Component {
+import { add, minus, asyncAdd } from '../../actions/counter'
 
-  config: Config = {
-    navigationBarTitleText: '分类'
+@connect(({ counter }) => ({
+  counter
+}), (dispatch) => ({
+  add () {
+    dispatch(add())
+  },
+  dec () {
+    dispatch(minus())
+  },
+  asyncAdd () {
+    dispatch(asyncAdd())
   }
-
-  state = {
-    current: -1,
-    loaded: false,
-    loading: false
-  }
-
-  componentDidMount() {
-    console.log(this)
+}))
+class Index extends Component {
+  config = {
+    navigationBarTitleText: '首页'
   }
 
   render () {
     return (
-      <View className='tagBox'>
-        <View className='at-row'>
-          <View className='at-col at-col-1 at-col--auto'>
-            <LeftSideBar></LeftSideBar>
-          </View>
-          <View className='at-col'>
-            <RightSideBar></RightSideBar>
-          </View>
-        </View>
+      <View className='todo'>
+        <Button className='add_btn' onClick={this.props.add}>+</Button>
+        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
+        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
+        <View>{this.props.counter.num}</View>
       </View>
     )
   }
 }
+
+export default Index

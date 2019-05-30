@@ -1,7 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtGrid, AtAvatar } from "taro-ui"
-import './user.less'
+import './user.scss'
 
 export default class Tags extends Component {
 

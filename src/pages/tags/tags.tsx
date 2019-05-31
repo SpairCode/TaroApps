@@ -1,5 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View } from '@tarojs/components'
+<<<<<<< HEAD
+import LeftSildeBar from '../components/leftSideBar/leftSildeBar'
+import RightSildeBar from '../components/rightSildeBar/rightSildeBar'
+import './tags.less'
+=======
 import LeftSideBar from '../leftSideBar/leftSideBar'
 import RightSideBar from '../rightSideBar/rightSideBar'
 import { connect } from '@tarojs/redux'
@@ -19,6 +24,7 @@ import { add, minus, asyncAdd } from '../../actions/counter'
     dispatch(asyncAdd())
   }
 }))
+>>>>>>> a2c37e947f72d68abac2184729bb096a3bda4eb2
 
 export default class Tags extends Component {
 
@@ -54,6 +60,13 @@ export default class Tags extends Component {
   render () {
     return (
       <View className='tagBox'>
+<<<<<<< HEAD
+        <View>
+          <LeftSildeBar></LeftSildeBar>
+        </View>
+        <View>
+          <RightSildeBar></RightSildeBar>
+=======
         <View className='at-row'>
           <View className='at-col at-col-1 at-col--auto'>
             <LeftSideBar current={ this.state.current }></LeftSideBar>
@@ -68,6 +81,7 @@ export default class Tags extends Component {
               </View>
             {/* </RightSideBar> */}
           </View>
+>>>>>>> a2c37e947f72d68abac2184729bb096a3bda4eb2
         </View>
       </View>
     )

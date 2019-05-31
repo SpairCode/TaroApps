@@ -1,37 +1,31 @@
-// import constants defined variable
-// defined function modified variable
-import Taro from '@tarojs/taro'
-import { ADD, MINUS} from '../constants/counter'
-import { createAction } from '../utils/redux'
+import { CATE_MENU } from '../constants/counter'
 import { API_CATE } from '../constants/api'
+import { createAction } from '../utils/redux'
 
-export const add = () => {
-  return {
-    type: ADD
-  }
-}
-export const minus = () => {
-  return {
-    type: MINUS
-  }
-}
 
-// 异步的 action
-export function asyncAdd () {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(add())
-    }, 2000)
-  }
-}
+export const dispatchMenu = payload => createAction({
+  url: API_CATE,
+  type: CATE_MENU,
+  payload
+})
 
-// export const demos = () => Taro.request({
-//   url: API_CATE,
-//   type: 'CATE_MENU',
-//   header: {
-//     'content-type': 'application/json'
-//   }
-// }).then((res) => {
-//   return res.data
+/**
+ * 子级菜单
+ * @param {*} payload
+ */
+// export const dispatchSubMenu = payload => createAction({
+//   url: API_CATE_SUB,
+//   type: CATE_SUB,
+//   payload
 // })
 
+/**
+ * 子级列表
+ * @param {*} payload
+ */
+// export const dispatchSubList = payload => createAction({
+//   url: API_CATE_SUB_LIST,
+//   type: CATE_SUB_LIST,
+//   cb: res => ({ ...res, id: payload.categoryL2Id }),
+//   payload
+// })

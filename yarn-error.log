@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @constants/api --silent --no-progress
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @constants/cate --silent --no-progress
 
 PATH: 
-  C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;F:\Common\LPP\TaroApps\node_modules\.bin;C:\Users\Fancy\AppData\Local\Temp\yarn--1558934428010-0.5543995876117842;F:\Common\LPP\TaroApps\node_modules\.bin;C:\Users\Fancy\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\Fancy\AppData\Local\Microsoft\WindowsApps;C:\Users\Fancy\AppData\Roaming\npm;E:\Microsoft VS Code\bin;C:\Program Files\Bandizip\;E:\Microsoft VS Code Exploration\bin;C:\Users\Fancy\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\WebStorm 2019.1\bin;C:\Users\Fancy\AppData\Local\atom\bin
+  C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;F:\Common\LPP\TaroApps\node_modules\.bin;C:\Users\Fancy\AppData\Local\Temp\yarn--1559268491021-0.24730410304057138;F:\Common\LPP\TaroApps\node_modules\.bin;C:\Users\Fancy\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\Fancy\AppData\Local\Microsoft\WindowsApps;C:\Users\Fancy\AppData\Roaming\npm;E:\Microsoft VS Code\bin;C:\Program Files\Bandizip\;E:\Microsoft VS Code Exploration\bin;C:\Users\Fancy\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\WebStorm 2019.1\bin;C:\Users\Fancy\AppData\Local\atom\bin
 
 Yarn version: 
   1.15.2
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@constants%2fapi: Not found
+  Error: https://registry.yarnpkg.com/@constants%2fcate: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65167:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129541:22)
       at Request.emit (events.js:189:13)

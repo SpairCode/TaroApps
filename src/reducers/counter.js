@@ -1,22 +1,36 @@
 // defined function modified variable
-import { ADD, MINUS } from '../constants/counter'
 // defined variable value
+
+import { CATE_MENU, CATE_SUB, CATE_SUB_LIST } from '../constants/counter'
+
 const INITIAL_STATE = {
-  num: 0
+  menu: [],
+  category: [],
+  subMenu: [],
+  subCategory: {}
 }
 
-export default function counter (state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case ADD:
+export default function cate(state = INITIAL_STATE, action) {
+  switch(action.type) {
+    case CATE_MENU: {
+      const { categoryList } = action.payload
+      const menu = categoryList.map(({ id, name }) => ({ id, name }))
+      console.log(...state)
+      return { ...state, menu, category: categoryList }
+    }
+    case CATE_SUB: {
       return {
         ...state,
-        num: state.num + 1
+        subMenu: action.payload.category.subCategoryList
       }
-    case MINUS:
+    }
+    case CATE_SUB_LIST: {
+      const { id, itemList } = action.payload
       return {
         ...state,
-        num: state.num - 1
+        subCategory: { ...state.subCategory, [id]: itemList }
       }
+    }
     default:
       return state
   }

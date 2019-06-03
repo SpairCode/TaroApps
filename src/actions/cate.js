@@ -1,13 +1,10 @@
-import { CATE_MENU } from '../constants/counter'
+import { CATE_MENU } from '../constants/cate'
 import { API_CATE } from '../constants/api'
 import { createAction } from '../utils/redux'
+import api from '../utils/api'
 
 
-export const dispatchMenu = payload => createAction({
-  url: API_CATE,
-  type: CATE_MENU,
-  payload
-})
+export const list = createAction(CATE_MENU, params => api.get(API_CATE, params))
 
 /**
  * 子级菜单

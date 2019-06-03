@@ -1,17 +1,20 @@
-/**
- * 适当封装 Redux，简化调用
- */
-/* eslint-disable import/prefer-default-export */
-import fetch from './request'
+export function createAction(actionType, func = () => {}) {
+  return (
+    params = {},
+    callback = { success: () => {}, failed: () => {} },
+    customActionType = actionType,
+  ) => async (dispatch) => {
+    try {
+      dispatch({ type: `${customActionType  }_request`, params });
+      const data = await func(params);
+      dispatch({ type: customActionType, params, payload: data });
 
-export function createAction(options) {
-  debugger
-  console.log(options)
-  const { url, payload, method, fetchOptions, cb, type } = options
-  return (dispatch) => {
-    return fetch({ url, payload, method, ...fetchOptions }).then((res) => {
-      dispatch({ type, payload: cb ? cb(res) : res })
-      return res
-    })
+      callback.success && callback.success({ payload: data })
+      return data
+    } catch (e) {
+      dispatch({ type: `${customActionType  }_failure`, params, payload: e })
+
+      callback.failed && callback.failed({ payload: e })
+    }
   }
 }

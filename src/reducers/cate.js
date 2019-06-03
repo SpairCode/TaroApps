@@ -1,7 +1,7 @@
 // defined function modified variable
 // defined variable value
 
-import { CATE_MENU, CATE_SUB, CATE_SUB_LIST } from '../constants/counter'
+import { CATE_MENU, CATE_SUB, CATE_SUB_LIST } from '../constants/cate'
 
 const INITIAL_STATE = {
   menu: [],

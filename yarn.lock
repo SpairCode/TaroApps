@@ -118,8 +118,8 @@
 
 "@tarojs/async-await@^1.3.0-beta.6":
   version "1.3.0-beta.6"
-  resolved "https://registry.npm.taobao.org/@tarojs/async-await/download/@tarojs/async-await-1.3.0-beta.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Fasync-await%2Fdownload%2F%40tarojs%2Fasync-await-1.3.0-beta.6.tgz#3d5aaf436615f7eef2c995bfc6ba057fcdc83941"
-  integrity sha1-PVqvQ2YV9+7yyZW/xroFf83IOUE=
+  resolved "https://registry.yarnpkg.com/@tarojs/async-await/-/async-await-1.3.0-beta.6.tgz#3d5aaf436615f7eef2c995bfc6ba057fcdc83941"
+  integrity sha512-bjb9O7wsDAt8tWnPxI/DHf0LDaaupo9m+TzXzLr7GkJG6L/EwEcS5TF63dWplbSFd2Dgvd4Ouztm7fnPlg271w==
   dependencies:
     promise-polyfill "^7.1.2"
     regenerator-runtime "^0.11.1"

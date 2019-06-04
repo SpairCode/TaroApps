@@ -8,17 +8,17 @@ export default class rightSideBar extends Component {
     return (
       <View className='rightSideBar'>
         <View>
-          <Image className='bannerImage' src={ this.props.category[0].focusBannerList[0].picUrl } ></Image>
+          <Image className='bannerImage' src={ this.props.category[this.props.currentIndex].focusBannerList[0].picUrl } ></Image>
         </View>
         <View className='at-row at-row--wrap'>
           {
-            this.props.category[0].subCategoryList.map((item, index) => {
+            this.props.category[this.props.currentIndex].subCategoryList.map((item, index) => {
               return (
-                <View className='at-col at-col-4'>
+                <View className='itemBox at-col at-col-4 at-col--auto'>
                   <View className='itemGood'>
                     <Image className='itemBanner' src={ item.bannerUrl }></Image>
                   </View>
-                  <Text className='itemName'> { item.name } </Text>
+                  <View className='itemName'> { item.name } </View>
                 </View>
               )
             })

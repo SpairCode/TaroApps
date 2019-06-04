@@ -1,1 +1,1 @@
-export const base = "https://miniapp.you.163.com"
+export const base = "https://miniapp.you.163.com/"

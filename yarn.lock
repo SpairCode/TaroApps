@@ -158,15 +158,9 @@
     less "^3.0.4"
 
 "@tarojs/plugin-sass@^1.3.0-beta.5":
-<<<<<<< HEAD
-  version "1.3.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@tarojs/plugin-sass/-/plugin-sass-1.3.0-beta.5.tgz#6462d865d6cc25c3752e5d8afad0b78c976338f5"
-  integrity sha512-/MGpCyMOmnCeeUupGUL4bOb2ojRKphN1gaN8dCpqBwA8PpZumirqjgAc+F4C2mcGuhwWemeFD5RFlvdL6x9RLQ==
-=======
   version "1.3.0-beta.6"
   resolved "https://registry.npm.taobao.org/@tarojs/plugin-sass/download/@tarojs/plugin-sass-1.3.0-beta.6.tgz#7152195270bc7dc7ca168264717f3647399f8edd"
   integrity sha1-cVIZUnC8fcfKFoJkcX82Rzmfjt0=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
   dependencies:
     node-sass "^4.12.0"
     scss-bundle "^2.5.1"
@@ -179,15 +173,9 @@
     uglify-js "^3.3.24"
 
 "@tarojs/redux-h5@^1.3.0-beta.5":
-<<<<<<< HEAD
-  version "1.3.0-beta.5"
-  resolved "https://registry.npm.taobao.org/@tarojs/redux-h5/download/@tarojs/redux-h5-1.3.0-beta.5.tgz#683b344d42890e36329bf8f9416b0d91bd357946"
-  integrity sha1-aDs0TUKJDjYym/j5QWsNkb01eUY=
-=======
   version "1.3.0-beta.6"
   resolved "https://registry.npm.taobao.org/@tarojs/redux-h5/download/@tarojs/redux-h5-1.3.0-beta.6.tgz#aa739056a17f37d84d745a8013b137d37b7b34e7"
   integrity sha1-qnOQVqF/N9hNdFqAE7E303t7NOc=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
   dependencies:
     hoist-non-react-statics "^2.5.0"
     invariant "^2.2.4"
@@ -195,19 +183,11 @@
     prop-types "^15.6.1"
 
 "@tarojs/redux@^1.3.0-beta.5":
-<<<<<<< HEAD
-  version "1.3.0-beta.5"
-  resolved "https://registry.npm.taobao.org/@tarojs/redux/download/@tarojs/redux-1.3.0-beta.5.tgz#d4f0670774057c9e8226393ddf2ef26b4955bfff"
-  integrity sha1-1PBnB3QFfJ6CJjk93y7ya0lVv/8=
-  dependencies:
-    "@tarojs/utils" "1.3.0-beta.5"
-=======
   version "1.3.0-beta.6"
   resolved "https://registry.npm.taobao.org/@tarojs/redux/download/@tarojs/redux-1.3.0-beta.6.tgz#72165231ff53689a92080ee995d352810f7fe5b7"
   integrity sha1-chZSMf9TaJqSCA7pldNSgQ9/5bc=
   dependencies:
     "@tarojs/utils" "1.3.0-beta.6"
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
 
 "@tarojs/router@1.3.0-beta.3":
   version "1.3.0-beta.3"
@@ -282,17 +262,10 @@
   resolved "https://registry.npm.taobao.org/@tarojs/utils/download/@tarojs/utils-1.3.0-beta.3.tgz#aaf25922b6df1ad056ebe911dfd7a8c201983df5"
   integrity sha1-qvJZIrbfGtBW6+kR39eowgGYPfU=
 
-<<<<<<< HEAD
-"@tarojs/utils@1.3.0-beta.5":
-  version "1.3.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.0-beta.5.tgz#501533a0c9c3f3ddfb52c4025c5ac11456753dcd"
-  integrity sha512-pCCdiFR9pWJ9Hs2MB8bC2pOE6EwFX4n5Nr9/+mlt56wyYNS+gmrv3gKcNQ4T6BG1ngCfW3yoilu+DzVzVLG9fg==
-=======
 "@tarojs/utils@1.3.0-beta.6":
   version "1.3.0-beta.6"
   resolved "https://registry.npm.taobao.org/@tarojs/utils/download/@tarojs/utils-1.3.0-beta.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40tarojs%2Futils%2Fdownload%2F%40tarojs%2Futils-1.3.0-beta.6.tgz#d293bc7b2ec1354718c75361f4d3605c1c6a2342"
   integrity sha1-0pO8ey7BNUcYx1Nh9NNgXBxqI0I=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
 
 "@tarojs/webpack-runner@1.3.0-beta.3":
   version "1.3.0-beta.3"
@@ -2619,11 +2592,7 @@ decode-uri-component@^0.2.0:
 
 deep-diff@^0.3.5:
   version "0.3.8"
-<<<<<<< HEAD
-  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
-=======
   resolved "https://registry.npm.taobao.org/deep-diff/download/deep-diff-0.3.8.tgz#c01de63efb0eec9798801d40c7e0dae25b582c84"
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
   integrity sha1-wB3mPvsO7JeYgB1Ax+Da4ltYLIQ=
 
 deep-equal@^1.0.1:
@@ -4007,13 +3976,8 @@ hmac-drbg@^1.0.0:
 
 hoist-non-react-statics@^2.5.0:
   version "2.5.5"
-<<<<<<< HEAD
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
-  integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
-=======
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -4337,13 +4301,8 @@ internal-ip@^3.0.1:
 
 invariant@2.2.4, invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
-<<<<<<< HEAD
-  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
-  integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
-=======
   resolved "https://registry.npm.taobao.org/invariant/download/invariant-2.2.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Finvariant%2Fdownload%2Finvariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
   dependencies:
     loose-envify "^1.0.0"
 
@@ -8011,13 +7970,8 @@ swiper@^4.4.2:
 
 symbol-observable@^1.2.0:
   version "1.2.0"
-<<<<<<< HEAD
-  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
-  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
-=======
   resolved "https://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ=
->>>>>>> bbd0ee8215d22ac52ed7096a38aa4af7f64d8dde
 
 table@^4.0.1:
   version "4.0.3"
@@ -8070,8 +8024,8 @@ tar@^4:
 
 taro-ui@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/taro-ui/-/taro-ui-2.1.0.tgz#fb2774d6261db75311ac6ce7be243c412c65a322"
-  integrity sha512-M2fb6TFAHCa+xXB4vcYk3rLnop1D4XUdEfjtDKU3VYTw9KbD5dEG9x9iONV9SSn+7ClozSTxa27Otwiji/f/ZA==
+  resolved "https://registry.npm.taobao.org/taro-ui/download/taro-ui-2.1.0.tgz#fb2774d6261db75311ac6ce7be243c412c65a322"
+  integrity sha1-+yd01iYdt1MRrGznviQ8QSxloyI=
   dependencies:
     "@types/react" "^16.7.3"
     bind-decorator "^1.0.11"

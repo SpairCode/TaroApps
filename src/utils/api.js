@@ -1,6 +1,5 @@
 import Taro from '@tarojs/taro'
 import { base } from './config'
-// import { console.log } from '../utils'
 
 const token = ''
 
@@ -20,14 +19,14 @@ export default {
       method: method,
       header: { 'content-type': contentType, 'token': token },
       success(res) {
-        if (res.statusCode === 404) {
+        if (res.data.code === 404) {
           return console.log('api', '请求资源不存在')
-        } else if (res.statusCode === 502) {
+        } else if (res.data.code === 502) {
           return console.log('api', '服务端出现了问题')
-        } else if (res.statusCode === 403) {
+        } else if (res.data.code === 403) {
           return console.log('api', '没有权限访问')
-        } else if (res.statusCode === 200) {
-          return res.data
+        } else if (res.data.code === 200) {
+          return res.data.data
         }
       },
       error(e) {

@@ -1,9 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
+import '@tarojs/async-await'
 import Index from './pages/index'
 import { Provider } from '@tarojs/redux'
 import configstore from './store'
 
-const store = configstore()
+const store = configstore
 
 import './app.less'
 import 'taro-ui/dist/style/components/flex.scss'

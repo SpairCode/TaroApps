@@ -9,7 +9,4 @@ const middlewares = [
   createLogger()
 ]
 
-export default function configStore () {
-  const store = createStore(rootReducer, applyMiddleware(...middlewares))
-  return store
-}
+export default createStore(rootReducer, applyMiddleware(...middlewares))

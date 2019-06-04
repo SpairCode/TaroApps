@@ -4,7 +4,7 @@ import LeftSideBar from '../leftSideBar/leftSideBar'
 import RightSideBar from '../rightSideBar/rightSideBar'
 import { connect } from '@tarojs/redux'
 
-import { list } from '../../actions/cate'
+import { list }  from '../../actions/cate'
 
 @connect(({ cate }) => ({ cate }), (dispatch) => ({
   list () {
@@ -17,30 +17,24 @@ export default class Tags extends Component {
     navigationBarTitleText: '分类'
   }
 
-  state = {
-    current: -1,
-    loaded: false,
-    loading: false
+  componentDidMount() {
+    this.props.list()
+    console.log(this.props.cate.menu)
   }
 
-  componentDidMount() {
-    // this.props.list()
-    console.log(this)
+  componentWillMount () {
+    console.log(this.props.cate.menu)
   }
 
   render () {
     return (
       <View className='tagBox'>
         <View className='at-row'>
-          <View className='at-col at-col-3 at-col--auto'>
-            <LeftSideBar current={ this.state.current }></LeftSideBar>
+          <View className='at-col at-col-3'>
+            <LeftSideBar menu={this.props.cate.menu} ></LeftSideBar>
           </View>
           <View className='at-col at-col-9'>
-            {/* <RightSideBar> */}
-              <View>
-                Test
-              </View>
-            {/* </RightSideBar> */}
+            <RightSideBar category={this.props.cate.category}></RightSideBar>
           </View>
         </View>
       </View>

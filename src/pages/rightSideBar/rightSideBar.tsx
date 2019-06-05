@@ -8,8 +8,14 @@ export default class rightSideBar extends Component {
     category: []
   }
 
+  goodDetails = (item) => {
+    Taro.navigateTo({
+      url: `/pages/tags-sub/index?id=${ item.id }&categoryId=${ item.superCategoryId }`
+    })
+  }
+
   render () {
-    console.log('category', this.props.category)
+    // console.log('category', this.props.category)
     const { category, currentIndex } = this.props
     return (
       <View className='rightSideBar'>
@@ -20,7 +26,7 @@ export default class rightSideBar extends Component {
           {
             category[currentIndex].subCategoryList.map((item, index) => {
               return (
-                <View className='itemGoods'>
+                <View onClick={ () => { this.goodDetails(item) } } className='itemGoods' id={ item.id } superCategoryId={ item.superCategoryId }  >
                   <View className='itemGood'>
                     <Image className='itemBanner' src={ item.bannerUrl }></Image>
                   </View>

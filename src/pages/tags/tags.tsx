@@ -23,11 +23,6 @@ export default class Tags extends Component {
 
   componentDidMount() {
     this.props.list()
-    console.log(this.props.cate.menu)
-  }
-
-  componentWillMount () {
-    console.log(this.props.cate.menu)
   }
 
   changeIndexs = (val) => {

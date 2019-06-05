@@ -31,6 +31,7 @@ class App extends Component {
       'pages/tags/tags',
       'pages/user/user',
       'pages/home/home',
+      'pages/tags-sub/index'
     ],
     window: {
       backgroundTextStyle: 'light',

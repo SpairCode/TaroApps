@@ -3,22 +3,30 @@ import { View } from '@tarojs/components'
 import './rightSideBar.scss'
 
 export default class rightSideBar extends Component {
+
+  static defaultProps = {
+    category: []
+  }
+
   render () {
     console.log('category', this.props.category)
+    const { category, currentIndex } = this.props
     return (
       <View className='rightSideBar'>
         <View>
-          <Image className='bannerImage' src={ this.props.category[this.props.currentIndex].focusBannerList[0].picUrl } ></Image>
+          <Image className='bannerImage' src={ category[currentIndex].focusBannerList[0].picUrl } ></Image>
         </View>
-        <View className='at-row at-row--wrap'>
+        <View className='itemList'>
           {
-            this.props.category[this.props.currentIndex].subCategoryList.map((item, index) => {
+            category[currentIndex].subCategoryList.map((item, index) => {
               return (
-                <View className='itemBox at-col at-col-4 at-col--auto'>
+                <View className='itemGoods'>
                   <View className='itemGood'>
                     <Image className='itemBanner' src={ item.bannerUrl }></Image>
                   </View>
-                  <View className='itemName'> { item.name } </View>
+                  <View className='itemName'>
+                    { item.name }
+                  </View>
                 </View>
               )
             })

@@ -3,6 +3,12 @@ import { View, Swiper, SwiperItem } from '@tarojs/components'
 import './tab-head.scss'
 
 class Tabs extends Component {
+
+  seeOther = (item) => {
+    console.log(item)
+    this.props.seeOther(item.id)
+  } 
+
   render () {
     const { subs } = this.props
     return (
@@ -11,7 +17,7 @@ class Tabs extends Component {
           { subs.map((item, index) => {
             return (
               <View className='tabClassify'>
-                <View> { item.name } </View>
+                <View onClick={ () => { this.seeOther(item) } }> { item.name } </View>
               </View>
             )
           }) }

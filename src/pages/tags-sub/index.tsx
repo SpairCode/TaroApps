@@ -19,9 +19,18 @@ class Subs extends Component {
     navigationBarTitleText: ''
   }
 
+  state = {
+    id: '',
+    categoryId: ''
+  }
+
   componentDidMount () {
     let id = parseInt(this.$router.params.id) // query id
     let categoryId = parseInt(this.$router.params.categoryId) // query categoryId
+    this.setState({
+      id: parseInt(this.$router.params.id), // query id
+      categoryId: parseInt(this.$router.params.categoryId) // query categoryId
+    })
     let params = { 
       categoryId: categoryId
     }
@@ -36,11 +45,19 @@ class Subs extends Component {
     }, 100) 
   }
 
+  seeOther = (categoryId) => {
+    let paramId = {
+      categoryL1Id: this.state.id,
+      categoryL2Id: categoryId
+    }
+    this.props.subList(paramId)
+  }
+
   render () {
     return (
       <View>
         <View>
-          <Tabs subs={ this.props.cate.subs }></Tabs>
+          <Tabs subs={ this.props.cate.subs } seeOther={ this.seeOther }></Tabs>
         </View>
         <View>
           <List subsList= { this.props.cate.subsList }></List>

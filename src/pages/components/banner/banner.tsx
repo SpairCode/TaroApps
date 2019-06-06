@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 // 引入 Swiper, SwiperItem 组件
 import { Swiper, SwiperItem, Image } from '@tarojs/components'
-import './banner.less'
+import './banner.scss'
 
 export default class Banner extends Component {
   render () {

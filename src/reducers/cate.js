@@ -1,13 +1,14 @@
 // defined function modified variable
 // defined variable value
 
-import { CATE_MENU, CATE_SUB } from '../constants/cate'
+import { CATE_MENU, CATE_SUB, SUB_LIST } from '../constants/cate'
 
 const INITIAL_STATE = {
   menu: [],
   category: [],
   subs: [],
-  subsTitle: ''
+  subsTitle: '',
+  subsList: []
 }
 
 export default function cate(state = INITIAL_STATE, action) {
@@ -28,6 +29,13 @@ export default function cate(state = INITIAL_STATE, action) {
         ...state,
         subs: subs,
         subsTitle: sub.name
+      }
+    }
+    case SUB_LIST: {
+      const { itemList } = action.payload.data
+      return {
+        ...state,
+        subsList: itemList
       }
     }
     default:

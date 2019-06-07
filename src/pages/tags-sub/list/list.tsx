@@ -34,8 +34,8 @@ class List extends Component {
               </View>  
               <View className='textDetails'>
                  <Text className='title'> { item.name } </Text>
-                 <View> <Text className='activityPrice'> ¥ { item.activityPrice } </Text> <Text className='retailPrice'> ¥ { item.retailPrice } </Text> </View>
-                 <View className='flag'> { item.limitedTag } </View>
+                 <View> <Text className={ item.activityPrice !== null ? 'activityPrice' : 'none'  }> ¥ { item.activityPrice } </Text> <Text className={ item.retailPrice != null ? `retailPrice` : `none` }> ¥ { item.retailPrice } </Text> </View>
+                 <View className={item.limitedFlag === true ? 'flag' : 'none' }> { item.limitedTag } </View>
               </View>
             </View>
           )

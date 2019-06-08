@@ -2,14 +2,23 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
 import './list.scss'
 
+
 class List extends Component {
+
+  goodDetail = (item) => {
+    console.log(item)
+    Taro.navigateTo({
+      url: `/pages/goodDetails/goodDetails?id=${ item.id }`
+    })
+  }
+
   render () {
     const { subsList } = this.props
     return (
       <View className='goodList'>
         { subsList.map((item, index) => {
           return (
-            <View className='listItem'>
+            <View className='listItem' onClick={ () => { this.goodDetail(item) } }>
               <View className='listItems'>
                 <View>
                   {/* 商品图片 */}
@@ -34,7 +43,8 @@ class List extends Component {
               </View>  
               <View className='textDetails'>
                  <Text className='title'> { item.name } </Text>
-                 <View> <Text className={ item.activityPrice !== null ? 'activityPrice' : 'none'  }> ¥ { item.activityPrice > item.retailPrice ? item.retailPrice : item.activityPrice } </Text> <Text className={ item.retailPrice != null ? 'retailPrice' : 'none' }> ¥ { item.retailPrice > item.activityPrice ? item.retailPrice : item.activityPrice  } </Text> </View>
+                 {/* 实际价格 交易价格 */}
+                 <View> <Text className={ item.activityPrice !== null && item.activityPrice > item.retailPrice ? 'none' : 'activityPrice'  }> ¥ { item.activityPrice > item.retailPrice ? item.retailPrice : item.activityPrice } </Text> <Text className={ item.retailPrice != null ? 'retailPrice' : 'none' }> ¥ { item.retailPrice > item.activityPrice ? item.retailPrice : item.activityPrice  } </Text> </View>
                  <View className={item.limitedFlag === true ? 'flag' : 'none' }> { item.limitedTag } </View>
               </View>
             </View>

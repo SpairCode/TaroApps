@@ -1,0 +1,1 @@
+export const GOOD_DETAILS = 'GOOD_DETAILS'

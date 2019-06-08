@@ -31,7 +31,8 @@ class App extends Component {
       'pages/tags/tags',
       'pages/user/user',
       'pages/home/home',
-      'pages/tags-sub/index'
+      'pages/tags-sub/index',
+      'pages/goodDetails/goodDetails'
     ],
     window: {
       backgroundTextStyle: 'light',

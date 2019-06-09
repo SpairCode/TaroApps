@@ -4,5 +4,5 @@ import goodDetails from './goodDetails'
 
 export default combineReducers({
   cate,
-  goodDetails,
+  goodDetails
 })

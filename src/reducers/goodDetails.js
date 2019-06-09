@@ -8,8 +8,11 @@ export default function goodDetails(state = INITIAL_STATE, action) {
   debugger
   switch(action.type) {
     case GOOD_DETAILS: {
-      debugger
-      console.log(action.payload.data)
+      console.log('action', action)
+      return {
+        ...state,
+        goodDetails: action
+      }
     }
     default:
       return state

@@ -11,3 +11,96 @@
     }
   }
 }
+.priceBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  .activity {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+  }
+  .price {
+    width: calc(100% - 120px);
+    height: 100%;
+    .promoTitle {
+      margin: 12px 0px 0px 24px;
+      font-size: 24px;
+      color: #fff;
+      overflow: hidden;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .promoPrice {
+      height: 75px;
+      line-height: 75px;
+      padding-right: 30px;
+      color: #fff;
+      .activityPrice {
+        font-size: 48px;
+      }
+      .activityPrices {
+        margin-left: 24px;
+      }
+      .retailPrice {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.promoTips {
+  background: #FFF0DD;
+  padding: 12px 30px;
+  width: 100%;
+  font-size: 24px;
+  color: #F48F18;
+  font-weight: 700;
+}
+
+.bonusBanner {
+  display: flex;
+  align-items: center;
+  border-top: 20px solid #f4f4f4;
+  padding: 32px 0px 32px 30px;
+  color: #333;
+  .tag { 
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    background-image: linear-gradient(90deg,#FF2C30 0,#FF8659 100%);
+    border-radius: 20px;
+    font-size: 20px;
+    color: #FFF;
+    margin-right: 16px;
+    vertical-align: top;
+    margin-top: 2px;
+    -ms-flex: none;
+    flex: none;
+  }
+  .descList {
+    font-size: 28px;
+    line-height: 39px;
+    display: inline-block;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
+  .buttonName {
+    font-size: 24px;
+    color: #FF2E31;
+    line-height: 47px;
+    margin-left: 10px;
+    text-align: right;
+    padding: 0 23px;
+    border: 1px solid #FF2E31;
+    -ms-flex: none;
+    flex: none;
+    border-radius: 24px;
+    margin-right: 10px;
+  }
+}

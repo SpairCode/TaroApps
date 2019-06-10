@@ -32,7 +32,7 @@ class App extends Component {
       'pages/user/user',
       'pages/home/home',
       'pages/tags-sub/index',
-      'pages/goodDetails/goodDetails'
+      'pages/goodDetails/goodDetails',
     ],
     window: {
       backgroundTextStyle: 'light',

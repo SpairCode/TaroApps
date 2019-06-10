@@ -39,15 +39,17 @@ class List extends Component {
                   {/* 底部 好货内部价 */}
                   <View className={ item.promBanner.valid === true ? 'promPrice': 'none' } style={{ backgroundImage: `url(${ item.promBanner.bannerTitleUrl })` }}>
                     <View className='title'> { item.promBanner.promoTitle } </View>  
-                    <View className='price'> ¥ { item.promBanner.promoSubTitle } </View>
+                    <View className={ item.promBanner.bannerType === 2 ? 'price' : 'none' }> ¥ { item.promBanner.promoSubTitle } </View>
+                    <View className={ item.promBanner.bannerType === 4 ? 'prices' : 'none' }> { item.promBanner.promoSubTitle } </View>
                   </View>
                   {/* 底部文字描述 */}  
                 </View>
-              </View>  
+              </View>
               <View className='textDetails'>
                  <Text className='title'> { item.name } </Text>
                  {/* 实际价格 交易价格 */}
-                 <View> <Text className={ item.activityPrice !== null && item.activityPrice > item.retailPrice ? 'none' : 'activityPrice'  }> ¥ { item.activityPrice > item.retailPrice ? item.retailPrice : item.activityPrice } </Text> <Text className={ item.retailPrice != null ? 'retailPrice' : 'none' }> ¥ { item.retailPrice > item.activityPrice ? item.retailPrice : item.activityPrice  } </Text> </View>
+                 <View className={ item.activityPrice !== null ? '' : 'none' }> <Text className={ item.activityPrice > item.retailPrice ? 'activityPrice' : 'activityPrice'  }> ¥ { item.activityPrice > item.retailPrice ? item.retailPrice : item.activityPrice } </Text> <Text className={ item.retailPrice != null ? 'retailPrice' : 'none' }> ¥ { item.retailPrice > item.activityPrice ? item.retailPrice : item.activityPrice  } </Text> </View>
+                 <View className={ item.activityPrice === null ? '' : 'none' }   >  <Text className='activityPrice'> ¥ { item.retailPrice } </Text> </View> 
                  <View className={item.limitedFlag === true ? 'flag' : 'none' }> { item.limitedTag } </View>
                  <View className={ item.limitedFlag === false ? 'flag empty' : 'none' }> { item.itemTagList[0].name } </View>
               </View>

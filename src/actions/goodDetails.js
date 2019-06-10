@@ -1,4 +1,4 @@
-import { GOOD_DETAILS } from '../constants/cate'
+import { GOOD_DETAILS } from '../constants/goodDetails'
 import { createApiAction } from './index'
 import api from '../utils/api'
 import { bindActionCreators } from 'redux'

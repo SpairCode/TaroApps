@@ -30,11 +30,14 @@ class List extends Component {
                     <Image src={ item.promLogo.logoUrl } ></Image> 
                   </View>
                   {/* 限时 */}
-                  <View className='promBanner' style={{ backgroundImage: `url(${ item.promBanner.bannerContentUrl })` }}>
+                  <View className={ item.promBanner.valid === true ? 'promBanner' : 'none' }  style={{ backgroundImage: `url(${ item.promBanner.bannerContentUrl })` }}>
                     { item.promBanner.content }
                   </View>
+                  <View className={ item.promBanner.valid === false ? 'simpleDesc' : 'none' }  >
+                    { item.simpleDesc }
+                  </View>
                   {/* 底部 好货内部价 */}
-                  <View className='promPrice' style={{ backgroundImage: `url(${ item.promBanner.bannerTitleUrl })` }}>
+                  <View className={ item.promBanner.valid === true ? 'promPrice': 'none' } style={{ backgroundImage: `url(${ item.promBanner.bannerTitleUrl })` }}>
                     <View className='title'> { item.promBanner.promoTitle } </View>  
                     <View className='price'> ¥ { item.promBanner.promoSubTitle } </View>
                   </View>
@@ -46,6 +49,7 @@ class List extends Component {
                  {/* 实际价格 交易价格 */}
                  <View> <Text className={ item.activityPrice !== null && item.activityPrice > item.retailPrice ? 'none' : 'activityPrice'  }> ¥ { item.activityPrice > item.retailPrice ? item.retailPrice : item.activityPrice } </Text> <Text className={ item.retailPrice != null ? 'retailPrice' : 'none' }> ¥ { item.retailPrice > item.activityPrice ? item.retailPrice : item.activityPrice  } </Text> </View>
                  <View className={item.limitedFlag === true ? 'flag' : 'none' }> { item.limitedTag } </View>
+                 <View className={ item.limitedFlag === false ? 'flag empty' : 'none' }> { item.itemTagList[0].name } </View>
               </View>
             </View>
           )

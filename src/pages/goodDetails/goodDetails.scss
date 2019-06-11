@@ -20,6 +20,7 @@
     width: 120px;
     height: 120px;
     background-size: cover;
+    background-position: center;
   }
   .price {
     width: calc(100% - 120px);
@@ -55,6 +56,7 @@
   background: #FFF0DD;
   padding: 12px 30px;
   width: 100%;
+  box-sizing: border-box;
   font-size: 24px;
   color: #F48F18;
   font-weight: 700;
@@ -102,5 +104,86 @@
     flex: none;
     border-radius: 24px;
     margin-right: 10px;
+  }
+}
+
+.content {
+  position: relative;
+  padding: 26px 0px 36px 30px;
+  .baseInfo {
+    display: flex;
+    margin-top: 14px;
+    .info {
+      flex: 1;
+      padding-right: 24px;
+      .name {
+        margin-bottom: 2px;
+        font-size: 32px;
+      }
+      .simpleDesc {
+        font-size: 24px;
+        line-height: 36px;
+        color: #7f7f7f;
+      }
+    }
+    .comment {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 178px;
+      background-image: linear-gradient(to bottom,#d9d9d9 43%,rgba(255,255,255,0) 0);
+      background-size: 1px 12px;
+      background-repeat: repeat-y;
+      .wrap {
+        padding-left: 20px;
+        box-sizing: border-box;
+        font-size: 28px;
+        text-align: center;
+        overflow: hidden;
+        .num {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 45px;
+          color: #B4282D;
+          text-align: center;
+        }
+        .com {
+          line-height: 36px;
+          font-size: 24px;
+          color: #7F7F7F;
+        }
+      }
+    }
+  }
+}
+
+.itemDetail {
+  border-top: 20px solid #f4f4f4;
+  .attrCon {
+    padding: 30px;
+    .cp {
+      padding: 40px 0 24px;
+      font-size: 28px;
+      line-height: 1;
+    }
+    .item {
+      zoom: 1;
+      font-size: 24px;
+      line-height: 44px;
+      padding: 10px 30px 10px 0px;
+      background-image: linear-gradient(to right,#919191 33%,rgba(255,255,255,0) 0);
+      background-position: top;
+      background-size: 12px 1px;
+      background-repeat: repeat-x;
+      .left {
+        float: left;
+        width: 148px;
+        position: relative;
+        color: #999;
+      }
+      .right {
+        margin-left: 168px;
+      }
+    }
   }
 }

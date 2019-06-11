@@ -1,1 +1,2 @@
 export const GOOD_DETAILS = 'GOOD_DETAILS'
+export const ITEM_DETAILS = 'ITEM_DETAILS'

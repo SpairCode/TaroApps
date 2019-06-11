@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image, Text } from '@tarojs/components'
+import { AtIcon } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import { good } from '../../actions/goodDetails'
 import './goodDetails.scss'
@@ -21,7 +22,7 @@ class goodDetail extends Component {
   }
 
   render () {
-    const { itemDetail, listPicUrl, bigPromotion, promoTips, bonusBanner } = this.props.goodDetails.goodDetails
+    const { itemDetail, listPicUrl, bigPromotion, promoTips, bonusBanner, name, simpleDesc, itemStar, attrList  } = this.props.goodDetails.goodDetails
     console.log(itemDetail.length)
     return (
       <View>
@@ -74,11 +75,45 @@ class goodDetail extends Component {
         </View>
         {/* 津贴领取提醒 */}
         <View className={ promoTips.length !== 0 ? 'promoTips' : 'none' }> { promoTips } </View>
+        {/* 内容详情 */}
+        <View className='content'>
+          <View className='baseInfo'>
+            <View className='info'>
+              <View className='name'> { name } </View>
+              <View className='simpleDesc'> { simpleDesc } </View>
+            </View>
+            <View className='comment'>
+              <View className='wrap'>
+                <View className='num'> { `${ parseFloat(itemStar.goodCmtRate) }%` } </View>
+                <View className='com'> 好评率 </View>
+              </View>
+              <AtIcon className='right' value='chevron-right' size='24' color='#7F7F7F'></AtIcon>
+            </View>
+          </View>
+        </View>
         {/* 津贴 */}
         <View className='bonusBanner'>
           <View className='tag'> { bonusBanner.tag } </View>
           <View className='descList'> { bonusBanner.descList } </View>
-          <View className='buttonName'> { bonusBanner.buttonName } </View>
+          <Text className='buttonName'> { bonusBanner.buttonName } </Text>
+        </View>
+        {/* 商品参数 */}
+        <View className='itemDetail'>
+          <View className='attrCon'>
+            <View className='cp'> 商品参数 </View>
+            <View>
+              { attrList.map((item, index) => {
+                return (
+                  <View className='item'>
+                    <View className='left'> { item.attrName } </View>
+                    <View className='right'>
+                      <View className='attrValue'> { item.attrValue } </View>
+                    </View>
+                  </View>
+                )
+              }) }
+            </View>
+          </View>
         </View>
       </View>
     )

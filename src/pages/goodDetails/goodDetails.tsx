@@ -13,6 +13,18 @@ import './goodDetails.scss'
 
 class goodDetail extends Component {
 
+  static defaultProps = {
+    attrList: [],
+    itemDetail: [],
+    listPicUrl: [],
+    bigPromotion: [],
+    promoTips: [],
+    bonusBanner: [],
+    name: '',
+    simpleDesc: '',
+    itemStar: {}
+  }
+
   componentDidMount () {
     let id = parseInt(this.$router.params.id) // query id
     let parmas = {
@@ -23,7 +35,6 @@ class goodDetail extends Component {
 
   render () {
     const { itemDetail, listPicUrl, bigPromotion, promoTips, bonusBanner, name, simpleDesc, itemStar, attrList  } = this.props.goodDetails.goodDetails
-    console.log(itemDetail.length)
     return (
       <View>
         {/* 轮播图 */}

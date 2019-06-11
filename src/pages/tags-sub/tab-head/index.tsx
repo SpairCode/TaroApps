@@ -4,6 +4,10 @@ import './tab-head.scss'
 
 class Tabs extends Component {
 
+  static defaultProps = {
+    subs: []
+  }
+
   seeOther = (item) => {
     console.log(item)
     this.props.seeOther(item.id)

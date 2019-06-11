@@ -15,6 +15,11 @@ import List from './list/list'
 }))
 class Subs extends Component {
 
+  static defaultProps = {
+    subsList: [],
+    subs: []
+  }
+
   config = {
     navigationBarTitleText: ''
   }
@@ -54,13 +59,14 @@ class Subs extends Component {
   }
 
   render () {
+    const { subs, subsList } = this.props.cate
     return (
       <View>
         <View>
-          <Tabs subs={ this.props.cate.subs } seeOther={ this.seeOther }></Tabs>
+          <Tabs subs={ subs } seeOther={ this.seeOther }></Tabs>
         </View>
         <View>
-          <List subsList= { this.props.cate.subsList }></List>
+          <List subsList= { subsList }></List>
         </View>
       </View>
     )

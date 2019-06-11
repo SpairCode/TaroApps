@@ -5,6 +5,10 @@ import './list.scss'
 
 class List extends Component {
 
+  static defaultProps = {
+    subsList: []
+  }
+
   goodDetail = (item) => {
     console.log(item)
     Taro.navigateTo({

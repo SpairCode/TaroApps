@@ -1,11 +1,11 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import './rightSideBar.scss'
 
 export default class rightSideBar extends Component {
 
   static defaultProps = {
-    category: []
+    category: [],
   }
 
   goodDetails = (item) => {
@@ -26,7 +26,7 @@ export default class rightSideBar extends Component {
           {
             category[currentIndex].subCategoryList.map((item, index) => {
               return (
-                <View onClick={ () => { this.goodDetails(item) } } className='itemGoods' id={ item.id } superCategoryId={ item.superCategoryId }  >
+                <View onClick={ () => { this.goodDetails(item) } } className='itemGoods' id={ item.id }>
                   <View className='itemGood'>
                     <Image className='itemBanner' src={ item.bannerUrl }></Image>
                   </View>

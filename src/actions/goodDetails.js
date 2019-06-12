@@ -10,4 +10,4 @@ export const itemDetail = createApiAction(ITEM_DETAILS, params => api.get('xhr/r
 export default bindActionCreators({
   good,
   itemDetail,
-  }, store.dispatch)
+}, store.dispatch)

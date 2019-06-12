@@ -28,9 +28,9 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/home/home',
       'pages/tags/tags',
       'pages/user/user',
-      'pages/home/home',
       'pages/tags-sub/index',
       'pages/goodDetails/goodDetails',
     ],

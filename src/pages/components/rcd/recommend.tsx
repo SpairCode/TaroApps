@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 // 引入 Swiper, SwiperItem 组件
-import { View } from '@tarojs/components'
+import { View, Image, Text } from '@tarojs/components'
 import './recommend.scss'
 
 export default class List extends Component {
@@ -11,14 +11,23 @@ export default class List extends Component {
       <View className='itemList'> {
         recommendList.map((item, index) =>{
           return (
-            <View className='item'>
+            <View className={ item.type !== 2 ? 'item' : 'none' } >
               {/*  活动页 */}
               <View className={ item.type === 0 ? '' : 'none' }>
-                <Image src={ item.indexRcmdPic.picUrls } > </Image>
+                <Image className='activity' src={ item.indexRcmdPic.picUrls } > </Image>
               </View>
               {/* 推荐产品 */}
-              <View className={ item.type === 1 ? '' : 'none' }>
-                <Image src={ item.categoryItem.listPicUrl } > </Image>
+              <View className={ item.type === 1  ? '' : 'none' }>
+                <Image className='product' src={ item.categoryItem.listPicUrl } > </Image>
+                {/* 标题 */}
+                <View className='productName'> { item.categoryItem.name } </View>
+                {/* 价格 */}
+                <View className='productPrice'> ¥ { item.categoryItem.retailPrice } </View>
+                {/* 用户评价 */}
+                <View className='productRcd'>
+                   <Image className='user' src={ item.categoryItem.comments[0].frontUserAvatar }></Image>
+                   <Text className='content'> { item.categoryItem.comments[0].content } </Text> 
+                </View>
               </View>
             </View>
           )

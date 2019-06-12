@@ -27,7 +27,7 @@ export default class Home extends Component {
   }
   state = {
     lastItemId: 0,
-    size: 20
+    size: 40
   }
 
   componentDidMount () {

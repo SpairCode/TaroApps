@@ -18,7 +18,7 @@ export default class List extends Component {
               </View>
               {/* 推荐产品 */}
               <View className={ item.type === 1  ? '' : 'none' }>
-                <Image className='product' src={ item.categoryItem.listPicUrl } lazyLoad={ true }> </Image>
+                <Image className='product' src={ item.categoryItem.listPicUrl } lazyLoad> </Image>
                 {/* 标题 */}
                 <View className='productName'> { item.categoryItem.name } </View>
                 {/* 价格 */}

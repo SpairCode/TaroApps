@@ -28,7 +28,7 @@ export default class Home extends Component {
 
   state = {
     lastItemId: 0,
-    size: 20
+    size: 20,
   }
 
   componentDidMount () {
@@ -42,8 +42,8 @@ export default class Home extends Component {
 
   loadData = () => {
     this.setState({
-      lastItemId: this.state.lastItemId + 10,
-      size: this.state.size + 10
+      lastItemId: this.state.lastItemId + 11,
+      size: this.state.size + 11
     })
     let param = {
       lastItemId: this.state.lastItemId,
@@ -58,7 +58,7 @@ export default class Home extends Component {
     console.log('focus', focus)
     return (
       <View className='homeBox'>
-        <ScrollView className='scrollView' scrollY onScrollToLower={ () => { this.loadData() } } style={{ height: '660px' }}>
+        <ScrollView className='scrollView' scrollY onScrollToLower={ () => { this.loadData() } }>
           <Banner focus={ focus } ></Banner>
           <Lists recommendList={ recommendList } > </Lists>
         </ScrollView>

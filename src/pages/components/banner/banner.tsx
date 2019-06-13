@@ -24,7 +24,7 @@ export default class Banner extends Component {
           focus.map((item, index) => {
             return (
               <SwiperItem className='item'>
-                <Image className='block' src={ item.img }></Image>
+                <Image className='block' src={ item.img } lazyLoad></Image>
               </SwiperItem>
             )
           })

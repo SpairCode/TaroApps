@@ -27,7 +27,7 @@ class List extends Component {
                 <View>
                   {/* 商品图片 */}
                   <View>
-                      <Image className='itemImage' src={ item.primaryPicUrl } ></Image> 
+                      <Image className='itemImage' src={ item.primaryPicUrl } lazyLoad></Image> 
                   </View>
                   {/* logo 活动 */}
                   <View className='logo'>

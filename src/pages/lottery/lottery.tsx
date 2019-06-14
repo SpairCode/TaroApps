@@ -14,11 +14,10 @@ export default class Lottery extends Component {
   }
 
   lottery = () => {
-    let number = Math.floor(Math.random() * 8 + 60)
+    let number = Math.floor(Math.random() * 8 + 60) // 生成的值为60-68之间
     this.setState({
-      maxVal: this.state.maxVal + number
+      maxVal: this.state.maxVal + number // 累加
     })
-    console.log(number)
     let add = () => {
       setTimeout(() => {
         if (this.state.current < this.state.maxVal) {
@@ -28,7 +27,7 @@ export default class Lottery extends Component {
           add()
         } else {
           console.log('current', this.state.current)  
-          clearTimeout(add)
+          clearTimeout(add) // 关闭定时器
         }
       }, 100)
     }

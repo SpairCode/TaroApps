@@ -28,11 +28,12 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/user/user',
       'pages/home/home',
       'pages/tags/tags',
-      'pages/user/user',
       'pages/tags-sub/index',
       'pages/goodDetails/goodDetails',
+      'pages/lottery/lottery',
     ],
     window: {
       backgroundTextStyle: 'light',

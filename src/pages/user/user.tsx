@@ -7,7 +7,15 @@ export default class Tags extends Component {
 
   config: Config = {
     navigationBarTitleText: '我的'
-  }  
+  }
+
+  lottery = (e) => {
+    if (e.value === '来抽奖') {
+      Taro.navigateTo({
+        url: '/pages/lottery/lottery'
+      })
+    }
+  }
 
   render () {
     return (
@@ -32,7 +40,7 @@ export default class Tags extends Component {
         </View>
         {/* 优惠列表 */}
         <View>
-        <AtGrid data={
+        <AtGrid onClick={ (e) => { this.lottery(e) } } data={
           [
             {
               image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png',
@@ -57,6 +65,10 @@ export default class Tags extends Component {
             {
               image: 'https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png',
               value: '手机馆'
+            },
+            {
+              image: 'https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/32245/22/2820/6521/5c6df9b3E1466dcd3/9f4cd68276f4e971.png',
+              value: '来抽奖'
             }
           ]
         } />

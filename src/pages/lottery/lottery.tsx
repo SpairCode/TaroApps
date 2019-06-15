@@ -15,6 +15,7 @@ export default class Lottery extends Component {
 
   lottery = () => {
     let number = Math.floor(Math.random() * 8 + 60) // 生成的值为60-68之间
+    number =  number % 8 === 0 || 1 || 2 ? number + 3 : number
     this.setState({
       maxVal: this.state.maxVal + number // 累加
     })

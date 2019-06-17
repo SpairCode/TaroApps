@@ -1,7 +1,8 @@
 import { GOOD_DETAILS } from '../constants/goodDetails'
 
 const INITIAL_STATE = {
-  goodDetails: {}
+  goodDetails: {},
+  status: 0,
 }
 
 export default function goodDetails(state = INITIAL_STATE, action) {
@@ -9,7 +10,8 @@ export default function goodDetails(state = INITIAL_STATE, action) {
     case GOOD_DETAILS: {
       return {
         ...state,
-        goodDetails: action.payload.data
+        goodDetails: action.payload.data,
+        status: 200,
       }
     }
     default:

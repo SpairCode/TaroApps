@@ -1,9 +1,11 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View } from '@tarojs/components'
+import { AtActivityIndicator } from 'taro-ui'
 import { connect } from '@tarojs/redux'
 import { subs, subList }  from '../../actions/cate'
 import Tabs from './tab-head/index'
 import List from './list/list'
+import './list/list.scss'
 
 @connect(({ cate }) => ({ cate }), (dispatch) => ({
   subs(params) {
@@ -59,9 +61,10 @@ class Subs extends Component {
   }
 
   render () {
-    const { subs, subsList } = this.props.cate
+    const { subs, subsList, status } = this.props.cate
     return (
       <View>
+        <AtActivityIndicator className={ status === 200 ? 'none' : '' } mode='center' color='#ff4949' size={0}></AtActivityIndicator>
         <View>
           <Tabs subs={ subs } seeOther={ this.seeOther }></Tabs>
         </View>

@@ -49,27 +49,27 @@ class goodDetail extends Component {
             autoplay>
             <SwiperItem>
               <View className='imageBox'>
-                <Image src={ listPicUrl + '?imageView&quality=75&thumbnail=750x0' } ></Image>
+                <Image src={ listPicUrl + '?imageView&quality=75&thumbnail=750x0' } lazyLoad></Image>
               </View>
             </SwiperItem>
             <SwiperItem>
               <View className='imageBox'>
-                <Image src={ itemDetail.picUrl1 + '?imageView&quality=75&thumbnail=750x0' }></Image>
+                <Image src={ itemDetail.picUrl1 + '?imageView&quality=75&thumbnail=750x0' } lazyLoad></Image>
               </View>
             </SwiperItem>
             <SwiperItem>
               <View className='imageBox'>
-                <Image src={ itemDetail.picUrl2 + '?imageView&quality=75&thumbnail=750x0' }> </Image>
+                <Image src={ itemDetail.picUrl2 + '?imageView&quality=75&thumbnail=750x0' } lazyLoad> </Image>
               </View>
             </SwiperItem>
             <SwiperItem>
               <View className='imageBox'>
-                <Image src={ itemDetail.picUrl3 + '?imageView&quality=75&thumbnail=750x0' }>  </Image>
+                <Image src={ itemDetail.picUrl3 + '?imageView&quality=75&thumbnail=750x0' } lazyLoad>  </Image>
               </View>
             </SwiperItem>
             <SwiperItem>
               <View className='imageBox'>
-                <Image src={ itemDetail.picUrl4 + '?imageView&quality=75&thumbnail=750x0' }> </Image>
+                <Image src={ itemDetail.picUrl4 + '?imageView&quality=75&thumbnail=750x0' } lazyLoad> </Image>
               </View>
             </SwiperItem>
           </Swiper>

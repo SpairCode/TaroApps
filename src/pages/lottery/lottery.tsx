@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
+import { AtMessage } from 'taro-ui'
 import './lottery.scss'
 
 export default class Lottery extends Component {
@@ -15,10 +16,10 @@ export default class Lottery extends Component {
 
   lottery = () => {
     let number = Math.floor(Math.random() * 8 + 60) // 生成的值为60-68之间
-    console.log('number: ', number % 8)
     number =  number % 8 === 0 || number % 8 === 1 || number % 8 === 2 ? number + 3 : number
+    let maxVal = ( this.state.maxVal + number ) % 8 === 0 || ( this.state.maxVal + number ) % 8 === 1 || ( this.state.maxVal + number ) % 8 === 2 ? this.state.maxVal + number + 3 : this.state.maxVal + number
     this.setState({
-      maxVal: this.state.maxVal + number // 累加
+      maxVal: maxVal // 累加
     })
     let add = () => {
       setTimeout(() => {
@@ -28,7 +29,10 @@ export default class Lottery extends Component {
           })
           add()
         } else {
-          console.log('current', this.state.current)  
+          Taro.atMessage({
+            'message': `恭喜获得 ${ this.state.maxVal % 8 + 1 } 等奖 `,
+            'type': 'info',
+          })
           clearTimeout(add) // 关闭定时器
         }
       }, 100)
@@ -41,6 +45,7 @@ export default class Lottery extends Component {
     return (
       <View className='lotteryBox'>
         <View className='lotteryBoxs'>
+          <AtMessage />
           <View data-id='0' className={ current % 8 === 0 ? 'active' : 'item'  }>
             <Image className='itemImage' src='https://img13.360buyimg.com/n1/s450x450_jfs/t1/15445/5/2946/178160/5c2325f9Ee9236ae9/6c2a5e9f2d14489a.jpg'></Image>
           </View>

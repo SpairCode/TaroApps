@@ -21,7 +21,6 @@ export default function cate(state = INITIAL_STATE, action) {
         ...state,
         menu: menu, 
         category: categoryList,
-        status: 200,
       }
     }
     case CATE_SUB: {
@@ -30,7 +29,8 @@ export default function cate(state = INITIAL_STATE, action) {
       return {
         ...state,
         subs: subs,
-        subsTitle: sub.name
+        subsTitle: sub.name,
+        status: 200,
       }
     }
     case SUB_LIST: {

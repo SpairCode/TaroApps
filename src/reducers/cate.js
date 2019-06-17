@@ -8,7 +8,8 @@ const INITIAL_STATE = {
   category: [],
   subs: [],
   subsTitle: '',
-  subsList: []
+  subsList: [],
+  status: 0,
 }
 
 export default function cate(state = INITIAL_STATE, action) {
@@ -19,7 +20,8 @@ export default function cate(state = INITIAL_STATE, action) {
       return { 
         ...state,
         menu: menu, 
-        category: categoryList
+        category: categoryList,
+        status: 200,
       }
     }
     case CATE_SUB: {

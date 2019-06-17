@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, ScrollView } from '@tarojs/components'
+import { AtActivityIndicator } from 'taro-ui'
 import Banner from '../components/banner/banner'
 import Lists from '../components/rcd/recommend'
 import { connect } from '@tarojs/redux'
@@ -54,13 +55,14 @@ export default class Home extends Component {
 
   render () {
     const { focus } = this.props.home.home
-    const { recommendList } = this.props.home
+    const { recommendList, status } = this.props.home
     console.log('focus', focus)
     return (
       <View className='homeBox'>
         <ScrollView className='scrollView' scrollY onScrollToLower={ () => { this.loadData() } }>
-          <Banner focus={ focus } ></Banner>
-          <Lists recommendList={ recommendList } > </Lists>
+          <AtActivityIndicator className={ status === 200 ? 'none' : '' } mode='center' color='#ffffff' size={0}></AtActivityIndicator>
+            <Banner focus={ focus } ></Banner>
+            <Lists recommendList={ recommendList } > </Lists>
         </ScrollView>
       </View>
     )

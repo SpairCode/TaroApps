@@ -40,7 +40,7 @@ export default class Tags extends Component {
             <LeftSideBar menu={this.props.cate.menu}  changeIndexs={ this.changeIndexs } ></LeftSideBar>
           </View>
           <View className='at-col at-col-9'>
-            <RightSideBar category={this.props.cate.category} currentIndex={ this.state.currentIndex }></RightSideBar>
+            <RightSideBar category={this.props.cate.category} currentIndex={ this.state.currentIndex } status={ this.props.cate.status }></RightSideBar>
           </View>
         </View>
       </View>

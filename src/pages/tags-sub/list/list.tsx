@@ -18,6 +18,7 @@ class List extends Component {
 
   render () {
     const { subsList } = this.props
+    console.log('subsList', subsList)
     return (
       <View className='goodList'>
         { subsList.map((item, index) => {
@@ -34,14 +35,14 @@ class List extends Component {
                     <Image src={ item.promLogo.logoUrl } ></Image> 
                   </View>
                   {/* 限时 */}
-                  <View className={ item.promBanner.valid === true ? 'promBanner' : 'none' }  style={{ backgroundImage: `url(${ item.promBanner.bannerContentUrl })` }}>
+                  <View className={ item.promBanner.valid === true ? 'promBanner' : 'none' }  style={{ backgroundImage: `url(${ item.scenePicUrl })` }}>
                     { item.promBanner.content }
                   </View>
                   <View className={ item.promBanner.valid === false ? 'simpleDesc' : 'none' }  >
                     { item.simpleDesc }
                   </View>
                   {/* 底部 好货内部价 */}
-                  <View className={ item.promBanner.valid === true ? 'promPrice': 'none' } style={{ backgroundImage: `url(${ item.promBanner.bannerTitleUrl })` }}>
+                  <View className={ item.promBanner.valid === true ? 'promPrice': 'none' } style={{ backgroundImage: `url(${ item.scenePicUrl })` }}>
                     <View className='title'> { item.promBanner.promoTitle } </View>  
                     <View className={ item.promBanner.bannerType === 2 ? 'price' : 'none' }> ¥ { item.promBanner.promoSubTitle } </View>
                     <View className={ item.promBanner.bannerType === 4 ? 'prices' : 'none' }> { item.promBanner.promoSubTitle } </View>

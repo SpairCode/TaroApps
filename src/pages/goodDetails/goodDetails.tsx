@@ -75,7 +75,7 @@ class goodDetail extends Component {
           </Swiper>
         </View>
         {/* 价格详情 */}
-        <View className='priceBox'>
+        {/* <View className='priceBox'>
           <View className='activity' style={{ backgroundImage: `url('${ bigPromotion.bannerTitleUrl }')` }}></View>
           <View className='price' style={{ backgroundImage: `url('${ bigPromotion.bannerContentUrl }')` }}>
             <View>
@@ -83,7 +83,7 @@ class goodDetail extends Component {
               <View className='promoPrice'> <Text className='activityPrices'>¥</Text><Text className='activityPrice'>{ bigPromotion.activityPrice }</Text> &nbsp; <Text className='retailPrice'> ¥ { bigPromotion.retailPrice } </Text> </View>
             </View>
           </View>
-        </View>
+        </View> */}
         {/* 津贴领取提醒 */}
         <View className={ promoTips.length !== 0 ? 'promoTips' : 'none' }> { promoTips } </View>
         {/* 内容详情 */}
